@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyOsB1CZO+3eNECOI+gD9R6B/Q5SbGjN"
+          crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Navbar Page</title>
+
+
+    <style>
+    footer {
+        background-color: #fff;
+        color: #333;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+</head>
+
+<body>
+
+    <header>
+        @* <div>
+        <h1>Payroll Module</h1>
+        </div> *@
+        @* <div>
+            <a href="#">Admin</a>
+            <span>|</span>
+            <a href="#">Employee</a>
+        </div> *@
+    </header>
+    <nav id="navbar-top" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">HR Module</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about" href="#">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="admin-btn" href="#">Login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link no-hover" id="emp-btn" href="#">Employee Signup</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" id="job-btn" href="#">Applicant Signup</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <img src="~/Content/image/image2.jpg" style="height:100%; width:100%;" class="img-fluid" alt="Placeholder Image">
+      
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyOsB1CZO+3eNECOI+gD9R6B/Q5SbGjN"
+            crossorigin="anonymous"></script>
+
+    <div>
+        <footer class="footer">
+
+            <p class="footer p"><b>&copy; 2023 HR Module</b></p>
+
+        </footer>
+
+    </div>
+    <script>
+        $('#admin-btn').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/AdminLogin';
+        });
+    </script>
+
+    <script>
+        $('#emp-btn').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/EmpSignup';
+        });
+    </script>
+
+    <script>
+        $('#job-btn').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/AppSignup';
+        });
+    </script>
+
+    <script>
+        $('#contact').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/ContactUs';
+        });
+    </script>
+
+    <script>
+        $('#about').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/Aboutus';
+        });
+    </script>
+</body>
+</html>
+
+

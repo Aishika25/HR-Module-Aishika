@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewData["Title"] = "AdHome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Admin Page</title>
+    <style>
+        body {
+            background-color: #8B4513; 
+            color: #fff; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            text-align: center;
+        }
+
+        .option {
+            background-color: #3E2723; 
+            color: #fff;
+            padding: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .option:hover {
+                background-color: #795548; 
+            }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar-top" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Admin Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://localhost:7044/ModelView/Home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact" href="https://localhost:7044/ModelView/ContactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about" href="https://localhost:7044/ModelView/Aboutus">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Admin Page</h1>
+
+    <div class="options">
+        <button id="empdtl" class="option" >Employee Details</button>
+        <button id="appdtl" class="option" >Applicant Details</button>
+        <button id="addjob" class="option" >Add Job Openings</button>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+    <script>
+        $('#addjob').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/JobDesc';
+        });
+    </script>
+
+    <script>
+        $('#appdtl').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/AppDtlPage';
+        });
+    </script>
+
+    <script>
+        $('#empdtl').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/EmpDtlGet';
+        });
+    </script>
+
+</body>
+</html>
+
+
+

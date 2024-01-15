@@ -1,0 +1,153 @@
+﻿@model CVMSCore.BAL.Models.UserLogin
+
+@{
+    ViewData["Title"] = "AdminLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 320px;
+        }
+
+        .login-header {
+            background-color: #4285f4;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .login-form {
+            padding: 100px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+            .login-btn:hover {
+                background-color: #357ae8;
+            }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar-top" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">HR Module</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://localhost:7044/ModelView/Home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact" href="https://localhost:7044/ModelView/ContactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about" href="https://localhost:7044/ModelView/Aboutus">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    @*  <div class="login-container"> *@
+    <div class="login-header">
+        <h2>Login</h2>
+    </div>
+    
+
+    @using (Html.BeginForm("login", "ModelView", FormMethod.Post, new { @class = "login-form" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserName)
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @required = "required" })
+            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @required = "required" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+        <div class="form-group text-right">
+     <span class="text-danger" id="spanMessage">@ViewData["ErrorMessage"]</span>
+     @Html.ValidationSummary(true, null, new { @class = "text-danger" })
+ </div>
+
+        @* <div class="signup-link">
+            Don't have an account? <a href="#" id="register" class="text-success">Sign Up</a>
+        </div> *@
+    }
+
+   @*  <script>
+        $('#register').click(function () {
+            window.location.href = 'https://localhost:7044/modelView/AdminSignup';
+        });
+    </script> *@
+
+    
+</body>
+</html>
+
+

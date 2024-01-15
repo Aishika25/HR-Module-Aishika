@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "Aboutus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #about-us-section {
+            background-color: #f0f0f0; 
+            padding: 20px;
+        }
+
+        #main-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar-top" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">HR Module</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" id="home" href="https://localhost:7044/ModelView/Home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact" href="https://localhost:7044/ModelView/ContactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="about-us-section">
+        <h1><b>About Us</b></h1>
+
+    </div>
+
+    <div id="main-content">
+        <p>Welcome to our HR Module, the heartbeat of our organization's commitment to its most valuable asset—its people.</p> 
+        <p>At our Organization, we believe in creating an inclusive and engaging workplace where every individual can thrive.</p> 
+        <p>Our Human Resources team is dedicated to cultivating a culture of growth, well-being, and innovation.</p>
+        <p>From talent acquisition to employee development and beyond, we are here to support and empower our diverse workforce.</p><br><br>
+        <p>At the core of our HR philosophy is the belief that happy and motivated employees drive organizational success.</p>
+        <p>We prioritize open communication, integrity, and continuous improvement in all our HR practices.</p>
+        <p>Whether you are a new recruit or a seasoned team member, our HR Module is designed to enhance your professional journey.</p>
+        <p>Join us as we build a workplace that not only meets the needs of today but also prepares our team for the challenges and opportunities of tomorrow.</p>
+    </div>
+
+    @* <script>
+        $('#home').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/Home';
+        });
+    </script>
+
+    <script>
+        $('#contact').click(function () {
+            window.location.href = 'https://localhost:7044/ModelView/ContactUs';
+        });
+    </script> *@
+</body>
+</html>
+

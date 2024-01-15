@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewData["Title"] = "AppDtlPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Applicant Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav id="navbar-top" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Applicant Details</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://localhost:7044/ModelView/Home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact" href="https://localhost:7044/ModelView/ContactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about" href="https://localhost:7044/ModelView/Aboutus">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    @* <nav id="navbar-top" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Applicant Details</a>
+    </nav> *@
+
+
+    <section>
+
+
+        <div class="wraper-main-detail">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="search-strip">
+                            <ul class="search-box d-flex">
+                                <li class="flex-grow-1"><input type="text" placeholder="search.." id="Search" class="form-control"></li>
+                                <li><button type="button" class="btn btngrey"><i class="fa fa-search" aria-hidden="true"></i></button></li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="table-responsive">
+                            <table id="Usertbl" class="table table-hover master-table table-bordered">
+                                <thead class="table-light-head">
+                                    <tr>
+                                        <th scope="col">S no.</th>
+                                        <th scope="col">Applicant Name</th>
+                                        <th scope="col">Applicant Qualifications</th>
+                                        <th scope="col">Applicant Experience</th>
+                                        <th scope="col">Applicant Aadhar No</th>
+                                        <th scope="col">CV/Resume</th>
+                                        <th scope="col">Job Name</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mtable">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</body>
+</html>
+<script src="~/content/js/hrgetapp.js"></script>

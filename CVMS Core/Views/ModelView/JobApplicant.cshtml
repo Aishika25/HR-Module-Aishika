@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewData["Title"] = "JobApplicant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav id="navbar-top" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">HR Module</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://localhost:7044/ModelView/Home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact" href="https://localhost:7044/ModelView/ContactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about" href="https://localhost:7044/ModelView/Aboutus">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <form id="jobOpeningForm" enctype="multipart/form-data">
+            <h2 class="mb-4">Job Application Form</h2>
+
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name:</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
+            </div>
+            <div id="name"></div>
+
+            <div class="mb-3">
+                <label for="qualifications" class="form-label">Qualifications:</label>
+                <input type="text" class="form-control" id="qualifications" name="qualifications" required>
+            </div>
+            <div id="qua"></div>
+
+
+            <div class="mb-3">
+                <label for="experience" class="form-label">Experience (in years):</label>
+                <input type="number" class="form-control" id="experience" name="experience" required>
+            </div>
+            <div id="exp"></div>
+
+
+            <div class="mb-3">
+                <label for="aadharNumber" class="form-label">Aadhar Number:</label>
+                <input type="number" class="form-control" id="aadharNumber" name="aadharNumber" required>
+            </div>
+            <div id="ano"></div>
+
+
+            <div class="mb-3">
+                <label for="cvResume" class="form-label">Upload CV/Resume:</label>
+                <input type="file" class="form-control" id="filepath" name="cvResume" accept=".pdf, .doc, .docx" required>
+            </div>
+            <div id="cv"></div>
+
+
+            <div class="mb-3">
+                <label for="jobName" class="form-label">Job Name:</label>
+                <input type="text" class="form-control" id="jobName" name="jobName" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="requiredSkills" class="form-label">Required Skills:</label>
+                <input type="text" class="form-control" id="requiredSkills" name="requiredSkills" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="preferredQualifications" class="form-label">Preferred Qualifications:</label>
+                <input type="text" class="form-control" id="preferredQualifications" name="preferredQualifications">
+            </div>
+
+            <div class="mb-3">
+                <label for="minExperience" class="form-label">Minimum Experience (in years):</label>
+                <input type="number" class="form-control" id="minExperience" name="minExperience" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="Salary" class="form-label">Salary Package (LPA):</label>
+                <input type="number" class="form-control" id="Salary" name="Salary" required>
+            </div>
+
+            
+
+            <div class="text-center">
+                <button type="submit" id="SaveBtn" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+</html>
+
+<script src="~/content/js/newhrscript.js"></script>
+
+
+
+
